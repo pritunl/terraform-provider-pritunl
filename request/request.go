@@ -31,7 +31,7 @@ type Request struct {
 func (r *Request) Do(prvdr *schemas.Provider, respVal interface{}) (
 	resp *http.Response, err error) {
 
-	url := "http://" + prvdr.PritunlHost + r.Path
+	url := "https://" + prvdr.PritunlHost + r.Path
 
 	authTimestamp := strconv.FormatInt(time.Now().Unix(), 10)
 	authNonce := bson.NewObjectId().Hex()
